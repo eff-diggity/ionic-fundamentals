@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>ToDo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!-- looks different than udemy version so building it their way below-will see how it shakes out -->
+<!-- <ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">My ToDo Page</ion-title>
+    </ion-toolbar>
+  </ion-header>
+</ion-content> -->
+
+<ion-content>
+  <ion-button color="danger" fill="outline" shape="round">Add ToDo</ion-button>
+  <ion-list>
+    <ion-item *ngFor="let item of [1,1,1,1,1,1,1,1]; let i = index">
+      <!-- slot = position of button: 
+        start= L of content in LtR, R in RtL 
+        end=opposite
+        secondary= L of content in IOS mode, R in MD mode 
+        primary= opposite-->
+      <ion-badge slot="start">❤️🍕{{i+1}}</ion-badge>
+      <ion-label>
+        <h2>Lorem</h2>
+        <p>Lorem, ipizzam</p>
+      </ion-label>
+      <!-- color-danger in theme/variables.scss -->
+      <ion-badge slot="end" color="danger">
+        <ion-icon name="trash-outline"></ion-icon>
+      </ion-badge>
+    </ion-item>
+  </ion-list>
+</ion-content>
